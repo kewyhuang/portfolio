@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista de Tarefas</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f2f5;
+      padding: 20px;
+    }
+    h1 {
+      color: #333;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      background-color: #fff;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .concluida {
+      text-decoration: line-through;
+      color: gray;
+    }
+    button {
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>📝 Minha Lista de Tarefas</h1>
+
+  <ul id="listaTarefas">
+    <li>
+      Estudar HTML
+      <button onclick="marcarConcluida(this)">Concluir</button>
+    </li>
+    <li>
+      Praticar CSS
+      <button onclick="marcarConcluida(this)">Concluir</button>
+    </li>
+    <li>
+      Criar um projeto simples
+      <button onclick="marcarConcluida(this)">Concluir</button>
+    </li>
+  </ul>
+
+  <script>
+    function marcarConcluida(botao) {
+      const item = botao.parentElement;
+      item.classList.toggle('concluida');
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora</title>
+  <style>
+    body {
+      background-color: #f0f2f5;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .calculadora {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      width: 300px;
+    }
+
+    #tela {
+      width: 100%;
+      height: 50px;
+      font-size: 24px;
+      text-align: right;
+      padding: 10px;
+      border: none;
+      border-radius: 10px;
+      background-color: #e6e6e6;
+      margin-bottom: 20px;
+    }
+
+    .botoes {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    button {
+      padding: 20px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      background-color: #f1f1f1;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    button:hover {
+      background-color: #ddd;
+    }
+
+    .igual {
+      background-color: #4caf50;
+      color: white;
+    }
+
+    .igual:hover {
+      background-color: #45a049;
+    }
+
+    .limpar {
+      background-color: #f44336;
+      color: white;
+    }
+
+    .limpar:hover {
+      background-color: #d32f2f;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="calculadora">
+    <input type="text" id="tela" readonly>
+    <div class="botoes">
+      <button onclick="adicionar('7')">7</button>
+      <button onclick="adicionar('8')">8</button>
+      <button onclick="adicionar('9')">9</button>
+      <button onclick="adicionar('/')">÷</button>
+
+      <button onclick="adicionar('4')">4</button>
+      <button onclick="adicionar('5')">5</button>
+      <button onclick="adicionar('6')">6</button>
+      <button onclick="adicionar('*')">×</button>
+
+      <button onclick="adicionar('1')">1</button>
+      <button onclick="adicionar('2')">2</button>
+      <button onclick="adicionar('3')">3</button>
+      <button onclick="adicionar('-')">−</button>
+
+      <button onclick="adicionar('0')">0</button>
+      <button onclick="adicionar('.')">.</button>
+      <button class="limpar" onclick="limpar()">C</button>
+      <button onclick="adicionar('+')">+</button>
+
+      <button class="igual" style="grid-column: span 4;" onclick="calcular()">=</button>
+    </div>
+  </div>
+
+  <script>
+    let tela = document.getElementById("tela");
+
+    function adicionar(valor) {
+      tela.value += valor;
+    }
+
+    function limpar() {
+      tela.value = '';
+    }
+
+    function calcular() {
+      try {
+        tela.value = eval(tela.value);
+      } catch {
+        tela.value = "Erro";
+      }
+    }
+  </script>
+
+</body>
+</html>

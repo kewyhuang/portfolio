@@ -1,0 +1,144 @@
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* ESTILO GERAL */
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+  }
+  
+  a {
+    color: #0077cc;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* CABEÇALHO */
+  header {
+    text-align: center;
+    padding: 30px 0;
+    background-color: #282c34;
+    color: #fff;
+    margin-bottom: 30px;
+    border-radius: 8px;
+  }
+  
+  header h1 {
+    font-size: 2.5rem;
+  }
+  
+  header p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 0;
+    flex-wrap: wrap;
+  }
+  
+  nav a {
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  /* CONTEÚDO PRINCIPAL */
+  main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  section {
+    margin-bottom: 40px;
+  }
+  
+  section h2 {
+    color: #0077cc;
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+  }
+  
+  /* SEÇÃO SOBRE */
+  #sobre {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  #sobre img {
+    border-radius: 50%;
+    border: 3px solid #0077cc;
+  }
+  
+  #sobre div {
+    flex: 1;
+    min-width: 250px;
+  }
+  
+  /* HABILIDADES */
+  ul {
+    list-style: square inside;
+    margin-top: 10px;
+  }
+  
+  /* PROJETOS */
+  article {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 15px;
+    transition: box-shadow 0.3s;
+  }
+  
+  article:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* RODAPÉ */
+  footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: #282c34;
+    color: #fff;
+    border-radius: 8px;
+  }
+  
+  /* RESPONSIVIDADE */
+  @media (max-width: 600px) {
+    nav ul {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    #sobre {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    header h1 {
+      font-size: 2rem;
+    }
+  
+    section h2 {
+      font-size: 1.5rem;
+    }
+  }
+  
